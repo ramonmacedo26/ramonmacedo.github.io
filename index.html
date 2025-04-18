@@ -24,6 +24,7 @@
       height: 200px;
       object-fit: cover;
       margin-bottom: 15px;
+      border-radius: 8px;
     }
     header {
       background: linear-gradient(135deg, #00b4d8, #90e0ef);
@@ -149,4 +150,75 @@
   </style>
 </head>
 <body>
-  <!-- resto do conteúdo continua igual -->
+  <button id="darkToggle">🌓</button>
+  <header>
+    <img src="perfil.jpeg" alt="Foto de Ramon Souza, criador da Oficina Digital">
+    <h1>Oficina Digital do Ramon</h1>
+    <p>Transformando confusão em clareza com soluções digitais</p>
+  </header>
+
+  <section>
+    <h2>Terminal de Dados</h2>
+    <div class="anima-dados" id="terminal"></div>
+  </section>
+
+  <section>
+    <h2>Serviços oferecidos</h2>
+    <div class="servicos">
+      <div class="servico">
+        <img src="planilha.png" alt="Planilha de controle financeiro">
+        <h3>Planilhas Sob Medida</h3>
+        <p>Criação de planilhas personalizadas para controle financeiro, operações, vendas, produtividade e mais.</p>
+      </div>
+      <div class="servico">
+        <img src="dashboard.png" alt="Dashboard em Power BI">
+        <h3>Dashboards em Power BI</h3>
+        <p>Desenvolvimento de painéis interativos para transformar seus dados em decisões rápidas e visuais.</p>
+      </div>
+      <div class="servico">
+        <img src="automacao.png" alt="Ilustração de automação de processos">
+        <h3>Automação de Processos</h3>
+        <p>Criação de soluções automatizadas com Power Automate, Excel e Python para agilizar seu dia a dia.</p>
+      </div>
+      <div class="servico">
+        <img src="treinamentos.png" alt="Ilustração de treinamentos em ferramentas de dados">
+        <h3>Treinamentos e Cursos</h3>
+        <p>Capacitações práticas em Python, Excel, Power BI e automação de processos com projetos reais.</p>
+      </div>
+    </div>
+    <a class="cta" href="#contato">💬 Quero conversar com você</a>
+  </section>
+
+  <section id="contato">
+    <h2>Contato direto</h2>
+    <div class="contato">
+      <p>📧 E-mail: <a href="mailto:ramonsouza@email.com">ramonsouza@email.com</a></p>
+      <p>📱 WhatsApp: <a href="https://wa.me/55SEUNUMERO" target="_blank">Clique aqui para chamar</a></p>
+      <p>💼 LinkedIn: <a href="https://linkedin.com/in/ramonsouza" target="_blank">linkedin.com/in/ramonsouza</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ramon Souza • Oficina Digital — Do caos à solução, com dados.</p>
+  </footer>
+
+  <script>
+    const texto = "Iniciando varredura... Erro encontrado: dados bagunçados. Executando RamonBot.exe ✅";
+    let i = 0;
+    const terminal = document.getElementById("terminal");
+
+    function digitar() {
+      if (i < texto.length) {
+        terminal.innerHTML += texto.charAt(i);
+        i++;
+        setTimeout(digitar, 40);
+      }
+    }
+    window.onload = digitar;
+
+    document.getElementById("darkToggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+  </script>
+</body>
+</html>
