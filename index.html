@@ -5,43 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oficina Digital do Ramon</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
     body {
-      font-family: 'Orbitron', sans-serif;
-      background: radial-gradient(circle, #0f0f1b, #090a20);
-      color: #e0e0f0;
+      font-family: 'Share Tech Mono', monospace;
+      background: #000;
+      color: #00ff88;
       margin: 0;
       padding: 0;
       overflow-x: hidden;
     }
     header {
-      background: linear-gradient(120deg, #0ff 0%, #09f 100%);
+      background: #010b10;
       text-align: center;
       padding: 80px 20px 60px;
-      color: #000;
-      position: relative;
-      box-shadow: 0 0 40px #0ff;
+      color: #00ff88;
+      border-bottom: 2px solid #00ff88;
     }
     header img {
       width: 140px;
       border-radius: 50%;
       margin-bottom: 20px;
-      box-shadow: 0 0 25px #0ff;
-      animation: pulse 2s infinite;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-      100% { transform: scale(1); }
+      border: 3px solid #00ff88;
     }
     header h1 {
-      font-size: 48px;
+      font-size: 42px;
       margin-bottom: 10px;
-      text-shadow: 2px 2px 4px #000;
     }
     header p {
-      font-size: 22px;
-      font-weight: 300;
+      font-size: 20px;
+      font-style: italic;
     }
     section {
       max-width: 960px;
@@ -49,11 +41,12 @@
       padding: 0 20px;
     }
     h2 {
-      font-size: 32px;
+      font-size: 28px;
       margin-bottom: 30px;
-      color: #0ff;
+      color: #00ffaa;
       text-align: center;
-      text-shadow: 0 0 10px #0ff;
+      border-bottom: 1px dashed #00ffaa;
+      padding-bottom: 5px;
     }
     .servicos {
       display: grid;
@@ -61,101 +54,63 @@
       gap: 30px;
     }
     .servico {
-      background: linear-gradient(160deg, #1e1f3b, #0c0c22);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
-    .servico:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+      background: #001f1f;
+      padding: 20px;
+      border-radius: 8px;
+      border: 1px solid #00ffaa44;
     }
     .servico h3 {
-      color: #0ff;
-      margin-top: 0;
+      color: #00ffaa;
     }
     .cta {
       display: block;
       text-align: center;
-      margin: 50px auto 0;
-      background: #0ff;
+      margin: 50px auto;
+      background: #00ff88;
       color: #000;
-      padding: 18px 36px;
-      border-radius: 8px;
+      padding: 14px 30px;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 18px;
       width: fit-content;
-      box-shadow: 0 0 15px #0ff;
-      transition: background 0.3s;
-    }
-    .cta:hover {
-      background: #00ccff;
     }
     .contato {
-      background: #0e102a;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(0,255,255,0.05);
+      background: #002c2c;
+      padding: 20px;
+      border-radius: 10px;
+      border: 1px dashed #00ffaa88;
     }
     .contato a {
-      color: #00eaff;
+      color: #00ffaa;
       text-decoration: none;
     }
     footer {
       text-align: center;
       padding: 30px;
-      background: #080a1a;
-      color: #aaa;
-      margin-top: 60px;
-      box-shadow: 0 -5px 30px rgba(0,255,255,0.1);
+      background: #010b10;
+      color: #00ffaa55;
+      font-size: 14px;
     }
     .anima-dados {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-top: 50px;
-      animation: flutuar 4s infinite alternate ease-in-out;
+      font-size: 16px;
+      margin-top: 30px;
+      padding: 20px;
+      background: #001818;
+      border-left: 3px solid #00ffaa;
+      animation: typewriter 4s steps(44) 1s 1 normal both, blinkTextCursor 500ms steps(44) infinite normal;
+      white-space: nowrap;
+      overflow: hidden;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
     }
-    .anima-dados div {
-      background: #161832;
-      color: #00eaff;
-      padding: 22px;
-      border-radius: 12px;
-      font-size: 18px;
-      transform: rotate(-3deg);
-      box-shadow: 0 0 15px #00f2ff55;
+    @keyframes typewriter {
+      from { width: 0; }
+      to { width: 100%; }
     }
-    .mascote {
-      text-align: center;
-      margin-top: 80px;
-    }
-    .mascote img {
-      width: 110px;
-      animation: bounce 2.5s infinite ease-in-out;
-    }
-    .mascote p {
-      font-size: 22px;
-      font-weight: bold;
-      color: #0ff;
-      margin-top: 15px;
-      text-shadow: 0 0 6px #0ff;
-    }
-    @keyframes flutuar {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-12px); }
-    }
-    @keyframes bounce {
-      0% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-      100% { transform: translateY(0); }
-    }
-    @media(max-width: 768px) {
-      .anima-dados {
-        flex-direction: column;
-        align-items: center;
-      }
+    @keyframes blinkTextCursor {
+      from { border-right-color: #00ffaa; }
+      to { border-right-color: transparent; }
     }
   </style>
 </head>
@@ -166,19 +121,11 @@
     <p>Do caos à solução, com dados.</p>
   </header>
 
-  <section class="animacao">
-    <h2>Por que me procurar?</h2>
+  <section>
+    <h2>Terminal de Dados</h2>
     <div class="anima-dados">
-      <div>😩 Planilha travando</div>
-      <div>📉 Dados bagunçados</div>
-      <div>🚀 Automatizado com Ramon</div>
+      Iniciando varredura... Erro encontrado: dados bagunçados. Executando RamonBot.exe ✅
     </div>
-    <p style="text-align:center; margin-top: 25px; color: #88f; font-weight: 300;">Transforme confusão em clareza. Chega de dor de cabeça com dados!</p>
-  </section>
-
-  <section class="mascote">
-    <img src="https://cdn-icons-png.flaticon.com/512/4712/4712035.png" alt="Mascote RamonBot">
-    <p>RamonBot diz: "Deixa os dados comigo!"</p>
   </section>
 
   <section>
