@@ -104,9 +104,33 @@
       margin-top: 10px;
       color: #555;
     }
+    .anima-dados {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 60px;
+      animation: flutuar 3s infinite alternate ease-in-out;
+    }
+    .anima-dados div {
+      background: #004080;
+      color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      font-size: 16px;
+      transform: rotate(-2deg);
+    }
+    @keyframes flutuar {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(-10px); }
+    }
     @media(max-width: 768px) {
       .servicos {
         grid-template-columns: 1fr;
+      }
+      .anima-dados {
+        flex-direction: column;
+        align-items: center;
       }
     }
   </style>
@@ -119,8 +143,12 @@
   </header>
 
   <section class="animacao">
-    <img src="https://media.giphy.com/media/8rFf0Yt0FUQj0gDPdj/giphy.gif" alt="Animação divertida sobre dados">
-    <p>Problemas com dados? Todo mundo já passou por isso. A boa notícia é que dá pra resolver com organização e boas ferramentas.</p>
+    <div class="anima-dados">
+      <div>😩 Planilha travando</div>
+      <div>📉 Dados bagunçados</div>
+      <div>🚀 Automatizado com Ramon</div>
+    </div>
+    <p>Transforme confusão em clareza. Chega de dor de cabeça com dados!</p>
   </section>
 
   <section>
