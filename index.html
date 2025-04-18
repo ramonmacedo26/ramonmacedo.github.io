@@ -1,4 +1,28 @@
-.servico img {
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oficina Digital do Ramon</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: #f6f9fc;
+      color: #2e2e2e;
+      margin: 0;
+      padding: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .servico img {
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
@@ -6,10 +30,67 @@
       border-radius: 8px;
     }
 
+    header {
+      background: linear-gradient(135deg, #00b4d8, #90e0ef);
+      text-align: center;
+      padding: 60px 20px 40px;
+      color: #fff;
+    }
+
+    header img {
+      width: 130px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #fff;
+    }
+
+    header h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    section {
+      max-width: 960px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    h2 {
+      font-size: 26px;
+      margin-bottom: 25px;
+      color: #0077b6;
+      text-align: center;
+    }
+
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .servico {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .servico:hover {
+      transform: translateY(-5px);
+    }
+
     .servico h3 {
       color: #00b4d8;
       margin-top: 0;
     }
+
     .cta {
       display: block;
       text-align: center;
@@ -23,18 +104,22 @@
       width: fit-content;
       transition: background 0.3s ease;
     }
+
     .cta:hover {
       background: #0077b6;
     }
+
     .contato {
       background: #caf0f8;
       padding: 25px;
       border-radius: 10px;
     }
+
     .contato a {
       color: #0077b6;
       text-decoration: none;
     }
+
     footer {
       text-align: center;
       padding: 25px;
@@ -42,6 +127,7 @@
       color: #fff;
       margin-top: 60px;
     }
+
     .anima-dados {
       font-size: 16px;
       margin-top: 30px;
@@ -52,23 +138,30 @@
       color: #0077b6;
       min-height: 60px;
     }
+
     .dark-mode {
       background: #121212;
       color: #f0f0f0;
     }
+
     .dark-mode header {
       background: linear-gradient(135deg, #023e8a, #0077b6);
     }
-    .dark-mode .servico, .dark-mode .contato {
+
+    .dark-mode .servico,
+    .dark-mode .contato {
       background: #1e1e1e;
       color: #fff;
     }
+
     .dark-mode .cta {
       background: #0096c7;
     }
+
     .dark-mode footer {
       background: #03045e;
     }
+
     #darkToggle {
       position: fixed;
       top: 20px;
@@ -85,7 +178,7 @@
 <body>
   <button id="darkToggle">🌓</button>
   <header>
-    <img src="perfil.jpeg" alt="Foto de Ramon Souza, criador da Oficina Digital">
+    <img src="perfil.jpeg" alt="Foto de Ramon Souza, criador da Oficina Digital" />
     <h1>Oficina Digital do Ramon</h1>
     <p>Transformando confusão em clareza com soluções digitais</p>
   </header>
@@ -99,22 +192,22 @@
     <h2>Serviços oferecidos</h2>
     <div class="servicos">
       <div class="servico">
-        <img src="planilha.png" alt="Planilha de controle financeiro">
+        <img src="planilha.png" alt="Planilha de controle financeiro" />
         <h3>Planilhas Sob Medida</h3>
         <p>Criação de planilhas personalizadas para controle financeiro, operações, vendas, produtividade e mais.</p>
       </div>
       <div class="servico">
-        <img src="dashboard.png" alt="Dashboard em Power BI">
+        <img src="dashboard.png" alt="Dashboard em Power BI" />
         <h3>Dashboards em Power BI</h3>
         <p>Desenvolvimento de painéis interativos para transformar seus dados em decisões rápidas e visuais.</p>
       </div>
       <div class="servico">
-        <img src="automacao.png" alt="Ilustração de automação de processos">
+        <img src="automacao.png" alt="Ilustração de automação de processos" />
         <h3>Automação de Processos</h3>
         <p>Criação de soluções automatizadas com Power Automate, Excel e Python para agilizar seu dia a dia.</p>
       </div>
       <div class="servico">
-        <img src="treinamentos.png" alt="Ilustração de treinamentos em ferramentas de dados">
+        <img src="treinamentos.png" alt="Ilustração de treinamentos em ferramentas de dados" />
         <h3>Treinamentos e Cursos</h3>
         <p>Capacitações práticas em Python, Excel, Power BI e automação de processos com projetos reais.</p>
       </div>
