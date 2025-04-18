@@ -2,27 +2,127 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oficina Digital do Ramon</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      background: #f4f4f4;
-      color: #333;
-      text-align: center;
-      padding: 50px;
+      background: #111;
+      color: #f4f4f4;
+      margin: 0;
+      padding: 0;
     }
-    h1 {
-      font-size: 36px;
+    header {
+      background: #1a1a1a;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    header h1 {
+      font-size: 40px;
       margin-bottom: 10px;
     }
-    p {
+    header p {
       font-size: 20px;
+      color: #aaa;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #f4f4f4;
+    }
+    .servicos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .servico {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .servico h3 {
+      margin-top: 0;
+      color: #ff9900;
+    }
+    .cta {
+      display: inline-block;
+      margin-top: 30px;
+      background: #ff9900;
+      color: #111;
+      padding: 15px 25px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .contato {
+      background: #222;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .contato a {
+      color: #ff9900;
+      text-decoration: none;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #1a1a1a;
+      color: #777;
+      margin-top: 60px;
+    }
+    @media(max-width: 768px) {
+      .servicos {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>🚧 Oficina Digital do Ramon 🚧</h1>
-  <p>Em breve, soluções digitais sob medida estarão disponíveis aqui.</p>
-  <p>Enquanto isso, fique à vontade para entrar em contato ou visitar meu LinkedIn.</p>
+  <header>
+    <h1>Oficina Digital do Ramon</h1>
+    <p>Automação, inteligência e soluções sob medida</p>
+  </header>
+
+  <section>
+    <h2>Como posso te ajudar?</h2>
+    <div class="servicos">
+      <div class="servico">
+        <h3>Planilhas Inteligentes</h3>
+        <p>Controles personalizados para trading, finanças pessoais, estoque, vendas e produtividade.</p>
+      </div>
+      <div class="servico">
+        <h3>Dashboards Profissionais</h3>
+        <p>Criação de painéis em Power BI e Looker Studio para transformar dados em decisões visuais.</p>
+      </div>
+      <div class="servico">
+        <h3>Extração Automática de Dados</h3>
+        <p>Transforme PDFs, relatórios e planilhas em dados utilizáveis com scripts sob demanda.</p>
+      </div>
+      <div class="servico">
+        <h3>Automação com Power Apps</h3>
+        <p>Ganhe tempo e reduza erros com aplicativos internos automatizados e integrados com SharePoint.</p>
+      </div>
+    </div>
+    <a class="cta" href="#contato">Quero conversar com você</a>
+  </section>
+
+  <section id="contato">
+    <h2>Contato direto</h2>
+    <div class="contato">
+      <p>📧 E-mail: <a href="mailto:ramonsouza@email.com">ramonsouza@email.com</a></p>
+      <p>📱 WhatsApp: <a href="https://wa.me/55SEUNUMERO" target="_blank">Clique aqui para chamar</a></p>
+      <p>💼 LinkedIn: <a href="https://linkedin.com/in/ramonsouza" target="_blank">linkedin.com/in/ramonsouza</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Ramon Souza • Oficina Digital — Do caos à solução, com dados.</p>
+  </footer>
 </body>
 </html>
