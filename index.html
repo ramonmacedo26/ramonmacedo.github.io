@@ -5,134 +5,150 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Oficina Digital do Ramon</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(145deg, #0f0f1b, #15162b);
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(circle, #0f0f1b, #090a20);
       color: #e0e0f0;
       margin: 0;
       padding: 0;
+      overflow-x: hidden;
     }
     header {
-      background: linear-gradient(90deg, #004cff, #00c3ff);
+      background: linear-gradient(120deg, #0ff 0%, #09f 100%);
       text-align: center;
-      padding: 60px 20px 40px;
-      color: #fff;
+      padding: 80px 20px 60px;
+      color: #000;
       position: relative;
+      box-shadow: 0 0 40px #0ff;
     }
     header img {
       width: 140px;
       border-radius: 50%;
       margin-bottom: 20px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
+      box-shadow: 0 0 25px #0ff;
       animation: pulse 2s infinite;
     }
     @keyframes pulse {
       0% { transform: scale(1); }
-      50% { transform: scale(1.05); }
+      50% { transform: scale(1.1); }
       100% { transform: scale(1); }
     }
     header h1 {
-      font-size: 40px;
+      font-size: 48px;
       margin-bottom: 10px;
+      text-shadow: 2px 2px 4px #000;
     }
     header p {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: 300;
     }
     section {
       max-width: 960px;
-      margin: 50px auto;
+      margin: 60px auto;
       padding: 0 20px;
     }
     h2 {
-      font-size: 28px;
-      margin-bottom: 25px;
-      color: #00c3ff;
+      font-size: 32px;
+      margin-bottom: 30px;
+      color: #0ff;
       text-align: center;
+      text-shadow: 0 0 10px #0ff;
     }
     .servicos {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      gap: 30px;
     }
     .servico {
-      background: #1e1f3b;
-      padding: 25px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0, 195, 255, 0.1);
-      transition: transform 0.3s;
+      background: linear-gradient(160deg, #1e1f3b, #0c0c22);
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.1);
+      transition: transform 0.4s, box-shadow 0.4s;
     }
     .servico:hover {
-      transform: translateY(-5px);
+      transform: scale(1.05);
+      box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
     }
     .servico h3 {
-      color: #00c3ff;
+      color: #0ff;
       margin-top: 0;
     }
     .cta {
       display: block;
       text-align: center;
-      margin: 40px auto 0;
-      background: #00c3ff;
+      margin: 50px auto 0;
+      background: #0ff;
       color: #000;
-      padding: 15px 30px;
-      border-radius: 6px;
+      padding: 18px 36px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      font-size: 18px;
       width: fit-content;
+      box-shadow: 0 0 15px #0ff;
+      transition: background 0.3s;
+    }
+    .cta:hover {
+      background: #00ccff;
     }
     .contato {
-      background: #24254a;
-      padding: 25px;
-      border-radius: 10px;
+      background: #0e102a;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,255,255,0.05);
     }
     .contato a {
-      color: #00c3ff;
+      color: #00eaff;
       text-decoration: none;
     }
     footer {
       text-align: center;
-      padding: 25px;
-      background: #1a1b35;
+      padding: 30px;
+      background: #080a1a;
       color: #aaa;
       margin-top: 60px;
+      box-shadow: 0 -5px 30px rgba(0,255,255,0.1);
     }
     .anima-dados {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       margin-top: 50px;
-      animation: flutuar 3s infinite alternate ease-in-out;
+      animation: flutuar 4s infinite alternate ease-in-out;
     }
     .anima-dados div {
-      background: #2c2f55;
-      color: #00c3ff;
-      padding: 18px;
-      border-radius: 10px;
-      font-size: 16px;
-      transform: rotate(-2deg);
+      background: #161832;
+      color: #00eaff;
+      padding: 22px;
+      border-radius: 12px;
+      font-size: 18px;
+      transform: rotate(-3deg);
+      box-shadow: 0 0 15px #00f2ff55;
     }
     .mascote {
       text-align: center;
-      margin-top: 70px;
+      margin-top: 80px;
     }
     .mascote img {
-      width: 100px;
-      animation: bounce 2s infinite ease-in-out;
+      width: 110px;
+      animation: bounce 2.5s infinite ease-in-out;
     }
     .mascote p {
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
-      color: #00c3ff;
-      margin-top: 12px;
+      color: #0ff;
+      margin-top: 15px;
+      text-shadow: 0 0 6px #0ff;
     }
     @keyframes flutuar {
       0% { transform: translateY(0); }
-      100% { transform: translateY(-10px); }
+      100% { transform: translateY(-12px); }
     }
     @keyframes bounce {
       0% { transform: translateY(0); }
-      50% { transform: translateY(-15px); }
+      50% { transform: translateY(-20px); }
       100% { transform: translateY(0); }
     }
     @media(max-width: 768px) {
@@ -157,7 +173,7 @@
       <div>📉 Dados bagunçados</div>
       <div>🚀 Automatizado com Ramon</div>
     </div>
-    <p style="text-align:center; margin-top: 20px; color: #ccc;">Transforme confusão em clareza. Chega de dor de cabeça com dados!</p>
+    <p style="text-align:center; margin-top: 25px; color: #88f; font-weight: 300;">Transforme confusão em clareza. Chega de dor de cabeça com dados!</p>
   </section>
 
   <section class="mascote">
