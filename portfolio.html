@@ -23,9 +23,10 @@
     }
     header p {
       font-size: 18px;
+      margin-bottom: 10px;
     }
     nav {
-      margin-top: 20px;
+      margin-top: 15px;
     }
     nav a {
       display: inline-block;
@@ -46,4 +47,91 @@
       text-align: center;
       font-size: 28px;
       color: #0077b6;
-      margin-bottom:
+      margin-bottom: 40px;
+    }
+    .galeria {
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+    }
+    .projeto {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+    }
+    .projeto img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .projeto p {
+      margin: 0;
+      padding: 20px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+    }
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #0077b6;
+      color: white;
+      margin-top: 80px;
+    }
+    a.back {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      color: #0077b6;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfólio</h1>
+    <p>Projetos da Oficina Digital do Ramon</p>
+    <nav>
+      <a href="index.html">🏠 Início</a>
+      <a href="portfolio.html">📂 Portfólio</a>
+      <a href="https://wa.me/5522988250159" target="_blank">📱 WhatsApp</a>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Serviços Oferecidos</h2>
+    <div class="galeria">
+      <div class="projeto">
+        <img src="powerbi_exemplo.png" alt="Dashboards em Power BI">
+        <p>Dashboards em Power BI</p>
+      </div>
+      <div class="projeto">
+        <img src="evasao_exemplo.png" alt="Previsão de Evasão de Clientes">
+        <p>Previsão de Evasão de Clientes</p>
+      </div>
+      <div class="projeto">
+        <img src="data_science_marketing_exemplo.png" alt="Modelos Preditivos para Diferentes Aplicações">
+        <p>Modelos Preditivos Para Diferentes Aplicações</p>
+      </div>
+      <div class="projeto">
+        <img src="automacao_exemplo.png" alt="Fluxo de Automação">
+        <p>Fluxo de Automação</p>
+      </div>
+      <div class="projeto">
+        <img src="treinamento_exemplo.png" alt="Treinamentos em Python, Excel, SQL e Power BI">
+        <p>Treinamentos em Python, Excel, SQL e Power BI</p>
+      </div>
+      <div class="projeto">
+        <img src="excel_exemplo.png" alt="Planilha de Análises Avançadas em Excel">
+        <p>Planilha de Análises Avançadas em Excel</p>
+      </div>
+    </div>
+    <a class="back" href="index.html">← Voltar para a página inicial</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Ramon Souza • Oficina Digital — Do caos à solução, com dados.</p>
+  </footer>
+</body>
+</html>
