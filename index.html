@@ -260,9 +260,10 @@
   <input type="hidden" name="nome" id="formNome" />
   <input type="hidden" name="telefone" id="formTelefone" />
   <input type="hidden" name="mensagem" id="formMensagem" />
-  <input type="hidden" name="_next" value="#" />
+  <input type="hidden" name="_next" value="#agradecimento" />
   <input type="hidden" name="_captcha" value="false" />
 </form>
+<p id="agradecimento" style="display:none; font-size: 14px; color: green; margin-top: 15px;">Obrigado! Sua mensagem foi enviada com sucesso.</p>
 
 <script>
   const texto = "Iniciando varredura... Erro encontrado: dados bagunçados. Executando RamonBot.exe ✅";
@@ -307,8 +308,10 @@
     const chat = document.getElementById('chatWidget');
     chat.style.display = 'none';
   }
+  if (window.location.hash === "#agradecimento") {
+    const p = document.getElementById("agradecimento");
+    if (p) p.style.display = "block";
+  }
 </script>
 </body>
 </html>
-
-
