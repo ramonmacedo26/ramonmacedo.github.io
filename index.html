@@ -241,15 +241,18 @@
   <p>© 2025 Ramon Souza • Oficina Digital — Do caos à solução, com dados.</p>
 </footer>
 
-<!-- Chat WhatsApp -->
+<!-- Chat Email -->
 <div id="chatWidget" style="position: fixed; bottom: 20px; right: 20px; width: 280px; background: #ffffff; border: 1px solid #ccc; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); padding: 15px; font-family: 'Quicksand', sans-serif; z-index: 9999;">
   <div style="display: flex; justify-content: space-between; align-items: center;">
     <strong>👋 Olá!</strong>
     <button onclick="fecharChat()" style="background: none; border: none; font-size: 18px; cursor: pointer; color: #999;">✖</button>
   </div>
-  <p style="margin-top: 5px; font-size: 14px;">Deseja adiantar sua dúvida? Fale aqui seu problema e seu telefone que entrarei em contato.</p>
-  <textarea id="mensagemChat" placeholder="Digite sua dúvida..." style="width: 100%; height: 60px; padding: 8px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
-  <button onclick="enviarMensagem()" style="margin-top: 10px; background: #00b4d8; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer;">Enviar</button>
+  <p style="margin-top: 5px; font-size: 14px;">Deseja adiantar sua dúvida? Fale aqui seu nome, telefone e problema que entrarei em contato.</p>
+  <input id="nomeChat" placeholder="Seu nome" style="width: 100%; padding: 8px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+  <input id="telefoneChat" placeholder="Seu telefone" style="width: 100%; padding: 8px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;" />
+  <textarea id="mensagemChat" placeholder="Sua dúvida..." style="width: 100%; height: 60px; padding: 8px; margin-top: 10px; border-radius: 5px; border: 1px solid #ccc;"></textarea>
+  <button onclick="enviarMensagemEmail()" style="margin-top: 10px; background: #00b4d8; color: white; border: none; padding: 8px 12px; border-radius: 5px; cursor: pointer;">Enviar</button>
+  <p id="confirmacaoChat" style="display:none; font-size: 13px; color: green; margin-top: 10px;">Mensagem enviada! Ramon entrará em contato em breve.</p>
 </div>
 
 <script>
@@ -269,15 +272,53 @@
     document.body.classList.toggle("dark-mode");
   });
 
-  function enviarMensagem() {
-    const mensagem = document.getElementById('mensagemChat').value;
-    if (!mensagem) {
-      alert('Por favor, escreva uma mensagem antes de enviar.');
+  function enviarMensagemEmail() {
+    const nome = document.getElementById('nomeChat').value.trim();
+    const telefone = document.getElementById('telefoneChat').value.trim();
+    const mensagem = document.getElementById('mensagemChat').value.trim();
+
+    if (!nome || !telefone || !mensagem) {
+      alert('Por favor, preencha todos os campos antes de enviar.');
       return;
     }
-    const saudacao = "Olá Ramon, vim do site e gostaria de falar sobre: ";
-    const link = `https://wa.me/5522988250159?text=${encodeURIComponent(saudacao + mensagem)}`;
-    window.open(link, '_blank');
+
+    const form = document.createElement("form");
+    form.action = "https://formsubmit.co/ramonsouza26@gmail.com";
+    form.method = "POST";
+    form.style.display = "none";
+
+    const inputNome = document.createElement("input");
+    inputNome.name = "nome";
+    inputNome.value = nome;
+    form.appendChild(inputNome);
+
+    const inputTelefone = document.createElement("input");
+    inputTelefone.name = "telefone";
+    inputTelefone.value = telefone;
+    form.appendChild(inputTelefone);
+
+    const inputMensagem = document.createElement("input");
+    inputMensagem.name = "mensagem";
+    inputMensagem.value = mensagem;
+    form.appendChild(inputMensagem);
+
+    const inputRedirect = document.createElement("input");
+    inputRedirect.name = "_next";
+    inputRedirect.value = "#";
+    form.appendChild(inputRedirect);
+
+    const captcha = document.createElement("input");
+    captcha.name = "_captcha";
+    captcha.value = "false";
+    form.appendChild(captcha);
+
+    document.body.appendChild(form);
+    form.submit();
+
+    document.getElementById("nomeChat").value = "";
+    document.getElementById("telefoneChat").value = "";
+    document.getElementById("mensagemChat").value = "";
+    document.getElementById("confirmacaoChat").style.display = "block";
   }
 
   function fecharChat() {
@@ -287,4 +328,5 @@
 </script>
 </body>
 </html>
+
 
