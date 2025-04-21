@@ -10,24 +10,31 @@
       margin: 0;
       background-color: #f5f5f5;
       color: #2e2e2e;
+      transition: background 0.3s, color 0.3s;
     }
+
     header {
       background: linear-gradient(135deg, #00b4d8, #90e0ef);
       color: white;
       text-align: center;
       padding: 60px 20px 40px;
+      transition: background 0.3s;
     }
+
     header h1 {
       font-size: 36px;
       margin: 0;
     }
+
     header p {
       font-size: 18px;
       margin-bottom: 10px;
     }
+
     nav {
       margin-top: 15px;
     }
+
     nav a {
       display: inline-block;
       margin: 0 10px;
@@ -38,33 +45,40 @@
       border-radius: 4px;
       font-weight: bold;
     }
+
     section {
       max-width: 960px;
       margin: 0 auto;
       padding: 50px 20px;
     }
+
     h2 {
       text-align: center;
       font-size: 28px;
       color: #0077b6;
       margin-bottom: 40px;
     }
+
     .galeria {
       display: flex;
       flex-direction: column;
       gap: 60px;
     }
+
     .projeto {
       background: white;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
       overflow: hidden;
+      transition: background 0.3s;
     }
+
     .projeto img {
       width: 100%;
       height: auto;
       display: block;
     }
+
     .projeto p {
       margin: 0;
       padding: 20px;
@@ -72,13 +86,16 @@
       font-weight: 600;
       text-align: center;
     }
+
     footer {
       text-align: center;
       padding: 25px;
       background: #0077b6;
       color: white;
       margin-top: 80px;
+      transition: background 0.3s;
     }
+
     a.back {
       display: block;
       text-align: center;
@@ -86,9 +103,49 @@
       color: #0077b6;
       text-decoration: none;
     }
+
+    /* BOTÃO MODO ESCURO */
+    #darkToggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      background: #0077b6;
+      color: white;
+      font-size: 16px;
+      z-index: 1000;
+    }
+
+    /* MODO ESCURO */
+    .dark-mode {
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    .dark-mode header {
+      background: linear-gradient(135deg, #023e8a, #0077b6);
+    }
+
+    .dark-mode nav a {
+      background-color: #f0f0f0;
+      color: #023e8a;
+    }
+
+    .dark-mode .projeto {
+      background: #1e1e1e;
+    }
+
+    .dark-mode footer {
+      background: #03045e;
+    }
   </style>
 </head>
 <body>
+  <button id="darkToggle">🌓</button>
+
   <header>
     <h1>Portfólio</h1>
     <p>Projetos da Oficina Digital do Ramon</p>
@@ -133,5 +190,12 @@
   <footer>
     <p>© 2025 Ramon Souza • Oficina Digital — Do caos à solução, com dados.</p>
   </footer>
+
+  <script>
+    const darkToggle = document.getElementById('darkToggle');
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
 </body>
 </html>
