@@ -5,63 +5,62 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Blog • Oficina Digital do Ramon</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f8fb; color: #333; }
-    header { background-color: #005f99; color: white; padding: 40px 20px; text-align: center; }
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+    body { font-family: 'Quicksand', sans-serif; margin: 0; padding: 0; background: #f6f9fc; color: #2e2e2e; transition: background 0.3s, color 0.3s; }
+    header { background: linear-gradient(135deg, #00b4d8, #90e0ef); text-align: center; padding: 60px 20px; color: #fff; }
+    .logo { width: 100px; border-radius: 50%; border: 4px solid #fff; margin-bottom: 15px; }
+    header h1 { font-size: 36px; margin: 10px 0; }
+    header p { font-size: 18px; font-weight: 300; }
+    nav { margin-top: 20px; }
+    nav a { display: inline-block; margin: 0 10px; padding: 8px 16px; background: #fff; color: #0077b6; text-decoration: none; border-radius: 4px; font-weight: bold; transition: background 0.3s; }
+    nav a.active, nav a:hover { background: #0077b6; color: #fff; }
     main { max-width: 900px; margin: 40px auto; padding: 0 20px; }
-    article { background: white; margin-bottom: 30px; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-    article h2 { color: #005f99; }
+    article { background: #fff; margin-bottom: 30px; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+    article h2 { color: #0077b6; }
     article p { margin-top: 10px; }
-    /* Padronização das imagens apenas na página de blog */
-    article img {
-      max-width: 300px;
-      width: 100%;
-      height: auto;
-      display: block;
-      margin: 15px auto;
-      border-radius: 4px;
-    }
+    article img { max-width: 300px; width: 100%; height: auto; display: block; margin: 15px auto; border-radius: 4px; }
     footer { text-align: center; padding: 20px; font-size: 0.9em; color: #555; }
-    a.button { display: inline-block; margin-top: 15px; background: #005f99; color: white; padding: 10px 20px; border-radius: 5px; text-decoration: none; }
-    a.button:hover { background: #00436e; }
+    a.button { display: inline-block; margin-top: 15px; background: #0077b6; color: #fff; padding: 10px 20px; border-radius: 5px; text-decoration: none; transition: background 0.3s; }
+    a.button:hover { background: #005f99; }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Blog • Oficina Digital do Ramon</h1>
-  <p>Insights sobre dados, automações e soluções digitais.</p>
-  <nav>
-     <a href="index.html">🏠 Início</a>
+  <header>
+    <img src="perfil.jpeg" alt="Oficina Digital do Ramon" class="logo">
+    <h1>Blog • Oficina Digital do Ramon</h1>
+    <p>Insights sobre dados, automações e soluções digitais.</p>
+    <nav>
+      <a href="index.html">🏠 Início</a>
+      <a href="blog.html" class="active">📰 Blog</a>
       <a href="portfolio.html">📂 Portfólio</a>
-      <a href="blog.html">📰 Blog</a>
       <a href="https://wa.me/5522988250159" target="_blank">📱 WhatsApp</a>
     </nav>
-</header>
+  </header>
 
   <main>
 
-   <article>
-  <h2>A Bagunça Invisível dos Dados</h2>
-  <p>Planilhas espalhadas, relatórios inconsistentes, sistemas que não se conversam... Esse cenário é mais comum do que parece. Saiba como a bagunça invisível dos dados pode estar custando caro à sua empresa — e o que fazer para resolver.</p>
-  <!-- imagem linkada -->
-  <a href="bagunca.html">
-    <img src="bagunça.png" alt="Bagunça Invisível dos Dados">
-  </a>
-  <!-- botão também linkado -->
-  <a href="bagunca.html" class="button">Ler Mais</a>
-</article>
+    <article>
+      <h2>A Bagunça Invisível dos Dados</h2>
+      <p>Planilhas espalhadas, relatórios inconsistentes, sistemas que não se conversam... Esse cenário é mais comum do que parece. Saiba como a bagunça invisível dos dados pode estar custando caro à sua empresa — e o que fazer para resolver.</p>
+      <a href="bagunca.html"><img src="bagunça.png" alt="Bagunça Invisível dos Dados"></a>
+      <a href="bagunca.html" class="button">Ler Mais</a>
+    </article>
 
-<article>
-  <h2>Decisão Baseada em Dados: Como Começar?</h2>
-  <p>Você já pensou em transformar a experiência do dia a dia em decisões ainda mais inteligentes, apoiadas por dados? Veja como aplicar o conceito de Data-Driven Decision-Making na prática sem complicação.</p>
-  <a href="decisao.html" class="button">Ler Mais</a>
-</article>
+    <article>
+      <h2>Decisão Baseada em Dados: Como Começar?</h2>
+      <p>Você já pensou em transformar a experiência do dia a dia em decisões ainda mais inteligentes, apoiadas por dados? Veja como aplicar o conceito de Data-Driven Decision-Making na prática sem complicação.</p>
+      <a href="decisao.html"><img src="decisao.png" alt="Decisão Baseada em Dados"></a>
+      <a href="decisao.html" class="button">Ler Mais</a>
+    </article>
 
-<article>
-  <h2>Indústria 4.0: A Base é a Organização dos Dados</h2>
-  <p>A automação, a IoT e a inteligência artificial só funcionam quando os dados estão organizados e acessíveis. Entenda porque estruturar os dados é o primeiro passo para entrar na nova era industrial.</p>
-  <a href="industria4.html" class="button">Ler Mais</a>
-</article>
+    <article>
+      <h2>Indústria 4.0: A Base é a Organização dos Dados</h2>
+      <p>A automação, a IoT e a inteligência artificial só funcionam quando os dados estão organizados e acessíveis. Entenda porque estruturar os dados é o primeiro passo para entrar na nova era industrial.</p>
+      <a href="industria4.html"><img src="industria4.png" alt="Indústria 4.0 e Dados"></a>
+      <a href="industria4.html" class="button">Ler Mais</a>
+    </article>
+
   </main>
 
   <footer>
